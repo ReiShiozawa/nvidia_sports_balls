@@ -12,8 +12,8 @@ It does stuff.
 
 ## Running this project
 
-1. Add steps for running this project.
-2. Make sure to include any required libraries that need to be installed for your project to run.
+1. run mkdir -p ~/nvdli-data
+3. Make sure to include any required libraries that need to be installed for your project to run.
 
 Get database from Kaggle
 Combine the train and test folder into types of balls
