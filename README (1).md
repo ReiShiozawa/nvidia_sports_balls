@@ -12,6 +12,7 @@ It does stuff.
 
 ## Running this project
 
+### Downloading and Sorting Database
 1. Get database from Kaggle.
 https://www.kaggle.com/datasets/samuelcortinhas/sports-balls-multiclass-image-classification
 
@@ -29,6 +30,8 @@ Combine the train and test folder into types of sports balls
 
 Replace `'Data'` with database directory.
 
+### Preparing Training with Docker Container
+
 5. After returning to the `Jetson-Inference` folder,
 Create script to run docker
 
@@ -45,11 +48,15 @@ Create script to run docker
 
 8. cd to `python/training/classification`
 
+### Training the Model
+
 9. Run `python3 train.py --model-dir=models/sports_balls data/sports_balls` to train Jetson Nano with the database. 
 
 10. To export the model outside of docker, run `python3 onnx_export.py --model-dir=models/sports_balls` After doing so, there should be a file named `resnet18.onnx`
 
 11. Leave Docker (ctrl + d)
+
+### Using the Model
 
 12. Run `NET=models/sports_balls` and `DATASET=data/sports_balls` to specify the folder of the model and dataset. 
 
