@@ -8,7 +8,9 @@
 
 Add an explanation of the algorithm and how it works. Make sure to include details about how the code works, what it depends on, and any other relevant info. Add images or other descriptions for your project here. 
 
-It does stuff.
+The machine learning model uses a database containing 15 types of sports balls. This is an interesting dataset because several images are misleading, e.g. some balls have been painted to look like other balls.
+
+It trains with Resnet18 on the nano, providing a good balance of training time and model accuracy. Resnet18 uses 18 skippable layers before reaching the FC Layer. If the model is too inaccurate, there are larger resnet models such as Resnet 50 that can increase the accuracy but also increase the training time.
 
 ## Running this project
 
