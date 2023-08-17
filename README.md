@@ -1,6 +1,6 @@
 # Project Name
-
- Add short description of project here > Classifies Sports Balls
+## Sports_Balls_Classification
+This program uses machine learning with Resnet 18 to classify 15 sports balls `(american_football baseball basketball billiard_ball bowling_ball cricket_ball football golf_ball hockey_ball hockey_puck rugby_ball shuttlecock table_tennis_ball tennis_ball volleyball)` and gives a confidence score with its answer.
 
 ![add image descrition here](direct image link here)
 
