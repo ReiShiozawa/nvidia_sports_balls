@@ -52,6 +52,7 @@ Create script to run docker
 ### Training the Model
 
 9. Run `python3 train.py --model-dir=models/sports_balls data/sports_balls` to train Jetson Nano with the database. 
+(You may need to enable virutal/swap memory depending on your ram usage)
 
 10. To export the model outside of docker, run `python3 onnx_export.py --model-dir=models/sports_balls` After doing so, there should be a file named `resnet18.onnx`
 
