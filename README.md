@@ -34,35 +34,25 @@ Replace `'Data'` with database directory.
 ### Preparing Training with Docker Container
 
 5. After returning to the `Jetson-Inference` folder,
-Create script to run docker
 
-`echo "sudo docker run --runtime nvidia -it --rm --network host \
-    --volume ~/nvdli-data:/nvdli-nano/data \
-    --device /dev/video0 \
-    nvcr.io/nvidia/dli/dli-nano-ai:v2.0.2-r32.7.1" > docker_dli_run.sh`
+6. Run the docker: `./docker/run.sh`
 
-6. Make it executeable.
-
-`chmod +x docker_dli_run.sh`
-
-7. Run the docker: `./docker_dli_run.sh`
-
-8. cd to `python/training/classification`
+7. cd to `python/training/classification`
 
 ### Training the Model
 
-9. Run `python3 train.py --model-dir=models/sports_balls data/sports_balls` to train Jetson Nano with the database. 
+8. Run `python3 train.py --model-dir=models/sports_balls data/sports_balls` to train Jetson Nano with the database. 
 (You may need to enable virutal/swap memory depending on your ram usage)
 
-10. To export the model outside of docker, run `python3 onnx_export.py --model-dir=models/sports_balls` After doing so, there should be a file named `resnet18.onnx`
+9. To export the model outside of docker, run `python3 onnx_export.py --model-dir=models/sports_balls` After doing so, there should be a file named `resnet18.onnx`
 
-11. Leave Docker (ctrl + d)
+10. Leave Docker (ctrl + d)
 
 ### Using the Model
 
-12. Run `NET=models/sports_balls` and `DATASET=data/sports_balls` to specify the folder of the model and dataset. 
+11. Run `NET=models/sports_balls` and `DATASET=data/sports_balls` to specify the folder of the model and dataset. 
 
-13. Connect USB Webcam to Nano the run `imagenet.py --model=$NET/resnet18.onnx --input_blob=input_0 --output_blob=output_0 --labels=$DATASET/labels.txt /dev/video0  sportsballs.mp4` to start classifing sports balls in real time.
+12. Connect USB Webcam to Nano the run `imagenet.py --model=$NET/resnet18.onnx --input_blob=input_0 --output_blob=output_0 --labels=$DATASET/labels.txt /dev/video0  sportsballs.mp4` to start classifing sports balls in real time.
 
-14. Quit to end video, locate video in `/classification`
+13. Quit to end video, locate video in `/classification`
 [View a video explanation here]([video link](https://youtu.be/xjpFr82vBGY))
