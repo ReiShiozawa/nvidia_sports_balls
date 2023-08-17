@@ -2,11 +2,10 @@
 ## Sports_Balls_Classification
 This program uses machine learning with Resnet 18 to classify 15 sports balls `(american_football baseball basketball billiard_ball bowling_ball cricket_ball football golf_ball hockey_ball hockey_puck rugby_ball shuttlecock table_tennis_ball tennis_ball volleyball)` and gives a confidence score with its answer.
 
-![add image descrition here](direct image link here)
+
 
 ## The Algorithm
 
-Add an explanation of the algorithm and how it works. Make sure to include details about how the code works, what it depends on, and any other relevant info. Add images or other descriptions for your project here. 
 
 The machine learning model uses a database containing 15 types of sports balls. This is an interesting dataset because several images are misleading, e.g. some balls have been painted to look like other balls.
 
@@ -65,4 +64,4 @@ Create script to run docker
 13. Connect USB Webcam to Nano the run `imagenet.py --model=$NET/resnet18.onnx --input_blob=input_0 --output_blob=output_0 --labels=$DATASET/labels.txt /dev/video0  sportsballs.mp4` to start classifing sports balls in real time.
 
 14. Quit to end video, locate video in `/classification`
-[View a video explanation here](video link)
+[View a video explanation here]([video link](https://youtu.be/xjpFr82vBGY))
